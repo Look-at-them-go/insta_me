@@ -7,9 +7,20 @@
 
 }
 
-header {
+.DoesNotExist {
 
-    height: 100vh;
-    background-image: linear-gradient(to right, #333, #777);
+    background-color: red;
 
+}
+
+.Header {
+
+}
+
+.NavigationBackground {
+
+}
+
+.doe {
+    
 }

@@ -1,10 +1,15 @@
-export default function Header() {
+import EmptyClassName from "@/Components/Helpers/EmptyClassName"
+import NavigationBackground from "@/Components/NavigationBackground"
+
+export default function Header( {defaultClassName = 'DoesNotExist'}) {
 
     return (
 
-        <header>
+        <div className={ EmptyClassName( defaultClassName, "Header" ) }>
 
-        </header>
+            <NavigationBackground defaultClassName="DoesNotExist"/>
+
+        </div>
 
     )
 
