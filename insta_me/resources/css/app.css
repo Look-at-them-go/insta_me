@@ -7,20 +7,100 @@
 
 }
 
-.DoesNotExist {
+html {
 
-    background-color: red;
+    font-size: 62.5%;
+
+}
+
+.HelperPositionBottom {
+
+    position: absolute;
+    bottom: 0;
+
+}
+
+.BG-WHITE {
+
+    background-color: #FFFFF0;
+
+    transition: background-color 0.5s ease-in;
+
+}
+
+:root {
+
+    --bg-color-E4F0F1 : #E4F0F1;
+    --bg-color-152629: #152620;
+
+}
+
+.HorizontalLineFull {
+
+    border: 2px solid var( --bg-color-152629 );
+    width: 100%;
 
 }
 
 .Header {
 
+    width: 100%;
+    min-height: 100vh;
+    background-color:  var( --bg-color-E4F0F1 );
+
+
 }
 
-.NavigationBackground {
+.NavigationContainer {
+
+    width: 100%;
+    height: 120px;
+    position: fixed;
+
+    transition: background-color 0.5s ease-out;
 
 }
 
-.doe {
+.NavigationBarContainer {
+
+    width: 80%;
+    height: 118px;
+    margin: 0% auto;
+    padding: 0px 20px;
+    display: flex;
+
+}
+
+.NavigationLinksContainer {
+
+    width: 33.34%;
+
+}
+
+.NavigationLogoContainer, .NavigationUserContainer {
+
+    width: 33.33%;
     
+}
+
+.NavigationLinksContainer, .NavigationLogoContainer, .NavigationUserContainer {
+
+    display: flex;
+    align-items: center;
+    height: 100%;
+
+}
+
+.NavigationLogoContainer {
+
+    justify-content: flex-start;
+
+}
+
+.LogoComponent {
+
+    background-image: url("/public/images/assets/Logo.svg");
+    height: 70px;
+    width: 160px;
+
 }
