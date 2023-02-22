@@ -23,7 +23,7 @@ class RegisteredUserController extends Controller
     {
         //Change to User/Auth/Register
         //When finished
-        return Inertia::render('Develepor/developerTestPage');
+        return Inertia::render('User/Auth/userLoginPage');
     }
 
     /**
@@ -47,7 +47,7 @@ class RegisteredUserController extends Controller
 
         event(new Registered($user));
 
-        Auth::login($user);
+        //Auth::login($user);
 
         return redirect(RouteServiceProvider::HOME);
     }
