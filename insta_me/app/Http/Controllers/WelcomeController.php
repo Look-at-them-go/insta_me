@@ -9,7 +9,7 @@ class WelcomeController extends Controller {
 
     public function Display() : Response {
 
-        return Inertia::render('Index', []);
+        return Inertia::render('indexPage', []);
 
     }
 

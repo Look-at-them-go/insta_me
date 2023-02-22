@@ -1,10 +1,6 @@
+export default function Logo( {_className = '', _id = ""} ) {
 
-export default function LogoComponent() {
 
-    return (
-
-        <div className="LogoComponent"></div>
-
-    )
+    return (<div className={_className} id={_id}></div>)
 
 }
