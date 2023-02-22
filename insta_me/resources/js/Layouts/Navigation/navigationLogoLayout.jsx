@@ -1,4 +1,4 @@
-import Logo from "@/Components/logoComponent";
+import Logo from "@/Components/LogoComponent";
 
 export default function NavigationLogo( {_className = '', _id = '' } ) {
 

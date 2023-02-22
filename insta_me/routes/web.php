@@ -3,7 +3,7 @@
 
 use App\Http\Controllers\WelcomeController;
 use Illuminate\Support\Facades\Route;
-
+use App\Events\TestEvent;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,5 +18,9 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [WelcomeController::class, 'Display']);
 
+Route::get('/test', function(){
+    
+    event(new \App\Events\TestEvent());
+});
 
 require __DIR__.'/auth.php';
