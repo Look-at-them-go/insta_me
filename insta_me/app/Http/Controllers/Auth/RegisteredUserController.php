@@ -23,7 +23,7 @@ class RegisteredUserController extends Controller
     {
         //Change to User/Auth/Register
         //When finished
-        return Inertia::render('User/Auth/userLoginPage');
+        return Inertia::render('User/Auth/userRegisterPage');
     }
 
     /**

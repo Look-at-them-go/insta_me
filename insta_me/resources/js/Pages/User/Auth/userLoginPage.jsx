@@ -1,32 +1,15 @@
-import { router, useForm } from "@inertiajs/react";
+import LoginNavigationContainer from "./Login/loginNavigationContainerLayout";
 
-
-export default function UserLogin(  ) {
-
-    const { data, setData, post } = useForm({
-        username: '',
-        email: '',
-        password: ''
-    });
-
-    const sumbit = (e) => {
-
-        e.preventDefault();
-
-        post(route('register'));
-
-    };
+export default function UserLogin(  {_className = '', _id = '' }  ) {
 
     return(
 
-        <form onSubmit={sumbit}>
+        <div className={_className} id={_id}>
+        
+            <LoginNavigationContainer _className="navigationContainerTop" _id="navigationContainerTopID" />
+            
 
-            <input type="text" value={data.username} onChange={e => setData('username', e.target.value)} />
-            <input type="email" value={data.email} onChange={e => setData('email', e.target.value)} />
-            <input type="password" value={data.password} onChange={e => setData('password', e.target.value)} />
-            <button type="submit"> Register </button>
-
-        </form>
+        </div>
 
     );
 
