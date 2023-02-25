@@ -99,6 +99,7 @@ export default function LoginForm( { _className = '', _id = '' }) {
                 { errors.password && <div className="formError" id="formErrorPasswordID">{errors.password}</div>}
             </div>
             
+        
             <button type="submit" disabled={processing}> Log In </button>
 
         </form>

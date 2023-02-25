@@ -27,6 +27,8 @@ html {
 
 /* HELPER CLASSES */
 
+
+
 .horizontalLineFull {
 
     border: 0.2rem solid var( --bg-color-152629 );
@@ -259,6 +261,11 @@ input {
 
 }
 
+input::placeholder {
+    color: var( --bg-color-152629 );
+    font-size: 2rem;
+}
+
 .inputEmailUser {
 
     padding: 2rem 2rem;
@@ -279,6 +286,7 @@ input {
 
     font-size: 2rem;
     width: 40%;
+
 
 }
 
