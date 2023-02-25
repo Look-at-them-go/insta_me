@@ -10,6 +10,14 @@
 
 }
 
+/* Change rem from 16 to 10 */
+/* Also when styling please use REM NOT PX */
+html {
+
+    font-size: 62.5%;
+
+}
+
 :root {
 
     --bg-color-E4F0F1 : #E4F0F1;
@@ -21,7 +29,7 @@
 
 .horizontalLineFull {
 
-    border: 2px solid var( --bg-color-152629 );
+    border: 0.2rem solid var( --bg-color-152629 );
     width: 100%;
 
 }
@@ -29,27 +37,31 @@
 .logo {
 
     background-image: url(/public/images/assets/Logo.svg);
-    width: 160px;
-    height: 70px;
+    width: 16rem;
+    height: 7rem;
 
+}
+
+.formError {
+    font-size: 2rem;
+    color: #9d1b46;
+    margin: 1rem 0 0 0;
 }
 
 /* HELPER CLASSES */
 
-.landingPage {
+.landingPageLayout {
 
     width: 100%;
-    min-height: 100vh;
+    min-height: 100dvh;
 
     background-color: var( --bg-color-E4F0F1 );
-
-
 
 }
 
 .navigationContainerTop {
 
-    height: 10vh;
+    height: 10dvh;
     width: 100%;
 
 }
@@ -59,7 +71,7 @@
     height: 100%;
     width: 80%;
     margin: 0% auto;
-    padding: 0% 20px;
+    padding: 0% 2rem;
     display: flex;
 
 }
@@ -95,20 +107,42 @@
 
 .navigationLink {
 
-    font-size: 20px;
+    font-size: 2rem;
     text-decoration: none;
     color: var( --bg-color-152629 );
-    margin: 0px 10px;
+    margin: 0px 0.5rem;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.navigationLink::after {
+
+    content: '';
+    border: 0.1rem solid var( --bg-color-152629 );
+
+    transform: scale(0);
+
+    transition: transform 0.4s ease-in;
+
+}
+
+.navigationLink:hover::after {
+
+
+    transform: scale(1);
+
+    transition: transform 0.4s ease-out;
 
 }
 
 .signupButton, .loginButton {
 
-    font-size: 20px;
+    font-size: 2rem;
     text-decoration: none;
-    margin-left: 30px;
-    width: 150px;
-    height: 50px;
+    margin-left: 3rem;
+    width: 15rem;
+    height: 5rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -118,9 +152,9 @@
 .signupButton {
 
     color: var( --bg-color-152629 );
-    background-color: var( --bg-color-E4F0F1 );
+    /*background-color: var( --bg-color-E4F0F1 );*/
 
-    border-radius: 20px;
+    border-radius: 2rem;
 
     transition: all 0.3s ease-in;
 
@@ -149,4 +183,163 @@
     border-radius: 0px;
     transition: border-radius 0.3s ease-out;
 
+}
+
+.userLogin {
+
+    min-height: 100dvh;
+    background-image: linear-gradient( 135deg, var(--bg-color-E4F0F1), #f2edba80);
+
+}
+
+.userAuthLayout {
+
+    min-height: 90dvh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.loginForm {
+
+    background-image: linear-gradient( 135deg, #f2edba, #f5beb7);
+    border-radius: 3rem;
+    width: 30%;
+    height: 40dvh;
+    padding: 8rem 0;
+    box-shadow: 0px 8px 8px 0px rgba(0,0,0,0.4);
+
+    position: relative;
+
+    transition: box-shadow 0.2s ease-in;
+
+}
+
+.loginForm:hover {
+
+    box-shadow: 0px 8px 12px 0px rgba(0,0,0,0.5);
+
+    transition: box-shadow 0.3s ease-out;
+
+}
+
+
+.loginForm button {
+
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translate(-50%, 0);
+
+    font-size: 2.4rem;
+    border: 0;
+    padding: 1rem 5rem;
+    box-shadow: 8px 8px 0px 0px var( --bg-color-152629 );
+
+    background-color: #e32d28;
+    color: #F1F7F8;
+    cursor: pointer;
+
+    transition: all 0.5s ease-in-out;
+
+}
+
+.loginForm button:hover {
+
+    box-shadow: -8px 8px 0px 0px var( --bg-color-152629 );
+
+    transition: all 0.4s ease-in-out;
+}
+
+input {
+
+    border: 0;
+    background: 0;
+
+}
+
+.inputEmailUser {
+
+    padding: 2rem 2rem;
+    display: flex;
+    flex-direction: column;
+
+
+}
+
+.inputEmailUserField {
+
+    width: 100%;
+    display: flex;
+
+}
+
+.inputEmailLabel {
+
+    font-size: 2rem;
+    width: 20%;
+
+}
+
+.inputEmail {
+
+    text-align: center;
+    font-size: 2rem;
+    width: 80%;
+
+    border-bottom: 0.1rem solid var( --bg-color-152629 );
+
+    transition: border-bottom 0.3s ease-out;
+
+}
+.inputEmail:focus {
+
+    outline: 0;
+    border-bottom: 0.4rem solid var( --bg-color-152629 );
+
+    transition: border-bottom 0.17s ease-in;
+}
+
+
+.inputPasswordUser {
+
+    padding: 2rem 2rem;
+    display: flex;
+    flex-direction: column;
+
+
+}
+
+.inputPasswordUserField {
+
+    width: 100%;
+    display: flex;
+
+}
+
+.inputPasswordLabel {
+
+    font-size: 2rem;
+    width: 25%;
+
+}
+
+.inputPassword {
+
+    text-align: center;
+    font-size: 2rem;
+    width: 75%;
+
+    border-bottom: 0.1rem solid var( --bg-color-152629 );
+
+    transition: border-bottom 0.3s ease-out;
+
+}
+.inputPassword:focus {
+
+    outline: 0;
+    border-bottom: 0.4rem solid var( --bg-color-152629 );
+
+    transition: border-bottom 0.17s ease-in;
 }

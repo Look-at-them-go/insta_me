@@ -1,5 +1,4 @@
-import SignUpNavigationContainer from "./SignUp/signupNavigationContainerLayout";
-
+import SignUpNavigationContainer from "./SignUp/Navigation/signupNavigationContainerLayout";
 
 export default function UserRegister(  {_className = '', _id = '' }  ) {
 

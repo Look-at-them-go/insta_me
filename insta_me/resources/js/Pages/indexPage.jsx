@@ -8,7 +8,7 @@ export default function Index() {
 
             <Head title="Messanging App" />
 
-            <LandingPage _className='landingPage' _id='landingPageID'/>
+            <LandingPage _className='landingPageLayout' _id='landingPageLayoutID'/>
 
         </>
     )
